@@ -1,0 +1,3 @@
+<p align="center"><a href="" target="_blank"><img src="https://github.com/dunkatyourhead/hop/blob/main/public/assets/front/img/Logo%20Hangout.png" width="400" alt=""></a></p>
+<h2>What is hangout project?</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum aliquid sequi vitae error iusto sapiente vero? Corrupti, rem. Id iure corporis illo et amet eum sint fugit? Laboriosam, sed perspiciatis?</p>

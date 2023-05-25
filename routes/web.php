@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthenticationsController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,7 @@ Route::middleware(['web', 'disableBackButton'])->group(function(){
 Route::prefix('superadmin')->name('superadmin.')->group(function(){
     Route::middleware(['auth:web', 'disableBackButton', 'superadmin', 'verified'])->group(function(){
         Route::get('dashboard', function(){ return view('pages.dashboard'); })->name('dashboard');
+        Route::resource('admin', AdminController::class);
     });
 });
 

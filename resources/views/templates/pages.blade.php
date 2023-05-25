@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Blank Page &mdash; Stisla</title>
+  <title>@yield('title')</title>
 
   <!-- General CSS Files -->
   <link rel="icon" href="{{ asset('assets/front/img/Logo.png') }}') }}">
@@ -59,8 +59,32 @@
   <script src="{{ asset('assets/js/stisla.js') }}"></script>
   
   <!-- JS Libraies -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.5/sweetalert2.all.js" integrity="sha512-AINSNy+d2WG9ts1uJvi8LZS42S8DT52ceWey5shLQ9ArCmIFVi84nXNrvWyJ6bJ+qIb1MnXR46+A4ic/AUcizQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- Page Specific JS File -->
+  <script type="text/javascript">
+    $('.delete').click(function(){
+      var id = $(this).attr('data-id');
+      Swal.fire({
+        title: "Are you sure?",
+        text: "Are you sure?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonClass: "btn-danger",
+        confirmButtonText: "Yes, delete it",
+        closeOnConfirm: false
+      }).then((result) => {
+        if(result.isConfirmed){
+          $(this).closest("form").submit();
+          Swal.fire(
+            'Deleted',
+            'You have successfully deleted',
+            'success',
+          );
+        }
+      });
+    });
+  </script>
   
   <!-- Template JS File -->
   <script src="{{ asset('assets/js/scripts.js') }}"></script>

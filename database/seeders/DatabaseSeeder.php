@@ -20,7 +20,6 @@ class DatabaseSeeder extends Seeder
             'email_verified_at' => now(),
             'password' => bcrypt(12345678),
             'level' => 1,
-            'status_aktif' => 1,
         ]);
     }
 }
